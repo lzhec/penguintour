@@ -1,0 +1,11 @@
+<div class="pickup">
+  <button type="button" (click)="toggleVisibility()" class="pickup-btn smartlid__reque
+  st-button_custom">Подобрать тур</button>
+  <div class="feedback" [style.display]="isHide ? 'none' : 'block'">
+    <button (click)="toggleVisibility()" class="closeWindow">
+      <img src="../../assets/img/close-icon.png" alt="close">
+    </button>
+    <spa-request-form [vm]='request' [vmDefinition]='requestDefinitionInput' [successMessage]="successMessage" [errorMessage]='errorMessage' (create)='createRequest($event)'>
+    </spa-request-form>
+  </div>
+</div>

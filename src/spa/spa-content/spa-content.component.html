@@ -1,0 +1,5 @@
+<spa-menu *ngIf="menuService.isVertical && screenService.isLarge() ||
+menuService.showVerticalMenu && !screenService.isLarge()" class='vertical-menu'></spa-menu>
+<div [@slider]="prepareRoute(outlet)" class='body-style'>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

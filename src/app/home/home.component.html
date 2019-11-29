@@ -1,0 +1,33 @@
+<div class = "tour-select">
+  <nav>
+    <ul class="nav tour-tabs" id="nav-tab-tour" role="tablist">
+      <li class="nav-item menu-item" [style.opacity]="visibilityTours ? 0.5 : 0.3">
+        <a class="nav-link tour-link active" id="home-tab" (click)="toggleInvisible($event)" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Туры</a>
+      </li>
+      <li class="nav-item menu-item" [style.opacity]="visibilityExcursions ? 0.5 : 0.3">
+        <a class="nav-link tour-link active" id="profile-tab" (click)="toggleInvisible($event)" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Экскурсионные туры</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="tab-content">
+    <div [style.display]="visibilityTours ? 'block' : 'none'" class="tab-pane show active" id="home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div data-sletat-module-id="f610974d-c5b0-4703-8e5d-4944385805b1"></div>
+      <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
+    </div>
+    <div [style.display]="visibilityExcursions ? 'block' : 'none'" class="tab-pane show active" id="profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <p>
+        Excursion tours
+      </p>
+    </div>
+  </div>
+</div>
+
+<app-request-tour></app-request-tour>
+
+<div id="tourmometr">
+  <div id="tourmometr-title">Турмометр</div>
+  <div id="tourmometr-root"></div>
+</div>
+
+
+<!--<spa-tour-tabs></spa-tour-tabs>-->

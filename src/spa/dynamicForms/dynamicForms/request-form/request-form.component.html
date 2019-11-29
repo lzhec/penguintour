@@ -1,0 +1,17 @@
+<form [@visibilityPopup] (ngSubmit)="onSubmit()" [formGroup]='form' id="contact-form">
+  <div @fader *ngFor="let field of vmDefinition">
+    <spa-request-field [field]='field' [form]='form' [submitted]='submitted'></spa-request-field>
+  </div>
+  <div @visibility *ngIf="errorMessage" class='alert alert-danger'>
+    {{errorMessage}}
+  </div>
+  <div @visibility *ngIf="successMessage" class='alert alert-success'>
+    {{successMessage}}
+  </div>
+  <div *ngIf="status !== 'waiting'">
+    <button [disabled]="" type="button" class="btn btn-primary" (click)='onCreate()'>Отправить</button>
+  </div>
+  <div @visibility *ngIf="status === 'waiting'">
+    Подождите ...
+  </div>
+</form>

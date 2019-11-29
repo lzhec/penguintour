@@ -1,0 +1,7 @@
+<div *ngFor="let item of spaConfigService.greetingText">
+  <div @fader *ngIf="item.route === location._platformLocation.pathname">
+    <h1 @fader>{{item.slogan}}</h1>
+    <h2 @fader>{{item.head}}</h2>
+    <p>{{item.text}}</p>
+  </div>
+</div>

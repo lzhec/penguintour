@@ -1,0 +1,59 @@
+:host
+  z-index: 10
+
+.feedback
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  top: -370px
+  width: 400px
+  height: auto
+  background-color: rgba(240, 245, 248, 0.9)
+  z-index: 100
+
+.closeWindow
+  position: absolute
+  width: 7.5%
+  height: 5%
+  margin: 2% 90% auto
+  border: none
+  background-color: rgba(240, 245, 248, 0)
+
+.pickup
+  position: relative
+  width: 100%
+  height: 150px
+  z-index: 10
+
+.pickup-btn
+  position: absolute
+  border: none
+  top: 50px
+  width: 25%
+  height: 50px
+  margin: 0 37% auto
+  background-color: #ffca00
+  border-radius: 2px
+  font-size: 20px
+
+.pickup-btn:hover
+  background-color: #fed63f
+
+@media screen and (max-width: 830px)
+  .pickup-btn
+    width: 40%
+    margin: -90px 30% auto
+
+  .feedback
+    height: 510px
+
+  .feedback
+    form
+      button
+        top: -50px
+
+.ng-valid[required], .ng-valid.required
+  border-bottom: 5px solid mediumseagreen
+
+.ng-invalid:not(form)
+  border-bottom: 5px solid red

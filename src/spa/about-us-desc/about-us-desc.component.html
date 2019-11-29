@@ -1,0 +1,11 @@
+<div class="about-us">
+  <ul class="about-us-description">
+    <br>
+    <li *ngFor="let item of aboutUsDescService.items">
+      <spa-about-us-desc-item [item]='item'>
+
+      </spa-about-us-desc-item>
+      <br>
+    </li>
+  </ul>
+</div>

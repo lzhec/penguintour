@@ -1,0 +1,26 @@
+<div *screenLarge class='title-bar'>
+  <div [ngClass]="{fullWidth: isFullWidth}" class="top-bar">
+    <a @fader routerLink="">
+      <img src="assets/img/penguin-logo.svg" alt="Logo">
+    </a>
+    <div @fader class="socies">
+      <icon-bar [showIcons]='flagForIcons'></icon-bar>
+      <span>64-80-83</span>
+    </div>
+  </div>
+	<div [ngClass]="{fullWidth: isFullWidth}" class="menu-area">
+    <spa-menu *ngIf="!menuService.isVertical"></spa-menu>
+	</div>
+  <div *ngIf="router.url !== '/contacts'" class="greeting-text">
+    <greeting-bar></greeting-bar>
+  </div>
+</div>
+
+<div *screenSmall class='title-bar-small'>
+	<div class="small-image-holder">
+    <img src="src/img/penguin-logo.svg" alt='Logo'>
+  </div>
+	<div class="small-icon-holder">
+    <a><img src="assets/img/menu.png" (click)='menuService.toggleMenu()'></a>
+	</div>
+</div>
